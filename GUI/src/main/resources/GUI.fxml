@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import tamk.tiko.parser.*?> 
+
+<BorderPane fx:id="BorderPane" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.Controller">
+  <bottom>
+    <GridPane alignment="TOP_LEFT">
+      <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <children>
+            <Button fx:id="clear" alignment="CENTER" contentDisplay="LEFT" layoutX="127.0" layoutY="5.0" mnemonicParsing="false" text="Clear" textAlignment="LEFT" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <Button fx:id="add" alignment="CENTER" contentDisplay="LEFT" layoutX="128.0" layoutY="5.0" mnemonicParsing="false" text="Save" textAlignment="LEFT" />
+          </children>
+        </AnchorPane>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <font>
+            <Font size="15.0" fx:id="x2" />
+          </font>
+          <GridPane.margin>
+            <Insets left="5.0" fx:id="x3" />
+          </GridPane.margin>
+        </Text>
+        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" GridPane.columnIndex="1" GridPane.margin="$x3" GridPane.rowIndex="0" />
+        <TextField fx:id="itemName" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Item Name"/>
+        <TextField fx:id="itemQuantity" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Item Quantity"/>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <padding>
+        <Insets />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </bottom>
+  <center>
+    <TableView fx:id="ItemList" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+        <TableColumn fx:id="name" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Item" >
+          <!-- <cellValueFactory><PropertyValueFactory property="name" />
+          </cellValueFactory> -->
+        </TableColumn>
+          <TableColumn fx:id="quantity" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Quantity" >
+            <!-- <cellValueFactory><PropertyValueFactory property="quantity" />
+            </cellValueFactory> -->
+        </TableColumn>
+      </columns>
+        <items>
+          <FXCollections fx:factory="observableArrayList"/>
+        </items>
+    </TableView>
+  </center>
+  <top>
+    <VBox minHeight="23.0" prefHeight="23.0" prefWidth="600.0">
+      <children>
+        <MenuBar id="menuBar" prefWidth="600.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="File" fx:id="fileMenu">
+              <items>
+                <MenuItem fx:id="newList" mnemonicParsing="false" text="New List" />
+                <MenuItem fx:id="saveList" mnemonicParsing="false" text="Save List" />
+                <MenuItem fx:id="loadList" mnemonicParsing="false" text="Load List" />
+                <MenuItem fx:id="closeWindow" mnemonicParsing="false" text="Close" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help" fx:id="helpMenu">
+              <items>
+                <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+      </children>
+    </VBox>
+  </top>
+</BorderPane>

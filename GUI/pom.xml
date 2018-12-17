@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tamk.tiko.gui</groupId>
+  <artifactId>GUI</artifactId>
+  <packaging>jar</packaging>
+  <version>0.3</version>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+    <dependencies>
+        <dependency>
+                <groupId>tamk.tiko</groupId>
+                <artifactId>Main</artifactId>
+                <version>Parser-0.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+      <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.5.0</version>
+            <configuration>
+                <mainClass>tamk.tiko.gui.GUI</mainClass>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>tamk.tiko.gui.GUI</mainClass>
+                    </manifest>
+                    <manifestEntries>
+                        <Built-By>Saku Tynjala</Built-By>
+                        <Class-Path>Parser-0.2.jar</Class-Path>
+                    </manifestEntries>
+                </archive>
+                <cleanupDaemonThreads>false</cleanupDaemonThreads>
+            </configuration>
+        </plugin>
+      </plugins>
+  </build>
+</project>
