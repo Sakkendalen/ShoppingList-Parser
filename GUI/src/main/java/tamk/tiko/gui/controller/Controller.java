@@ -23,6 +23,7 @@ import javafx.collections.ObservableList;
 import javafx.application.Platform;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import java.io.File;
 
 /**
  * Controller is used fetch objects (String and Int) from javaFX window what user 
@@ -141,14 +142,38 @@ public class Controller implements Initializable{
         saveList.setOnAction(new EventHandler<ActionEvent>() {
             @Override 
             public void handle(ActionEvent e) {
-                JsonWriter writer = new JsonWriter();
-                writer.WriteFile(items);
+
+                // FileChooser fileChooser = new FileChooser();
+                // fileChooser.setTitle("Save File");
+                // FileChooser.ExtensionFilter tmp = new FileChooser.ExtensionFilter("JSON file (*.json)", ".json");
+                // fileChooser.getExtinsionFilters().add(tmp);
+                // File file = fileChooser.showSaveDialog(stage);
+
+                // if (file != null){
+                    JsonWriter writer = new JsonWriter();
+                    writer.WriteFile(items);
+                // }
             }
         });
 
         loadList.setOnAction(new EventHandler<ActionEvent>() {
             @Override 
             public void handle(ActionEvent e) {
+
+                // try (BufferedReader reader = new BufferedReader(new FileReader(new File("file.txt")))) {
+
+                //     String line;
+                //     while ((line = reader.readLine()) != null)
+                //         System.out.println(line);
+            
+                // } catch (IOException e) {
+                //     e.printStackTrace();
+                // }
+
+                // // Stream<String> stringit = Files.readAllLines(Paths.get(args[0])).stream();
+                // // stringit.filter((s) -> s.contains("\t  ")).map((t) -> t.replaceAll("\t  ", "____")).forEach(System.out::println);
+                // JsonObject jsonObject = new JsonParser().parse("{\"name\": \"John\"}").getAsJsonObject();
+                // System.out.println(jsonObject.get("name").getAsString());
 
                 //SHIIIIIT
                 System.out.println("load");

@@ -2,6 +2,7 @@ import tamk.tiko.parser.*;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.File;
 
 /**
  * Main.java purpose is to launch javafx window and connect it with parser.
@@ -47,6 +48,7 @@ import java.util.ArrayList;
         }
 
         JsonWriter test2 = new JsonWriter();
+        // File file = new File("");
         
         test2.WriteFile(items);
         
