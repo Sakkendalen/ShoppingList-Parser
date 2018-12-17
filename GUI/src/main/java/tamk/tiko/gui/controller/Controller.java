@@ -77,6 +77,8 @@ public class Controller implements Initializable{
 
     List<JsonObject> items = new ArrayList<JsonObject>();
 
+    ObservableList<JsonObject> data;
+
     @FXML
     protected void addJsonObject(ActionEvent event) {
 
@@ -87,7 +89,7 @@ public class Controller implements Initializable{
 
         items.add(temp);
 
-        ObservableList<JsonObject> data = ItemList.getItems();
+        data = ItemList.getItems();
         data.add(temp);
 
         System.out.println(data);
@@ -132,6 +134,7 @@ public class Controller implements Initializable{
             @Override 
             public void handle(ActionEvent e) {
                 items.clear();
+                data.clear();
             }
         });
 
