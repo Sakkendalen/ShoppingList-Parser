@@ -51,16 +51,13 @@
       </rowConstraints>
     </GridPane>
   </bottom>
+
   <center>
     <TableView fx:id="ItemList" prefHeight="200.0" prefWidth="200.0">
       <columns>
         <TableColumn fx:id="name" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Item" >
-          <!-- <cellValueFactory><PropertyValueFactory property="name" />
-          </cellValueFactory> -->
         </TableColumn>
           <TableColumn fx:id="quantity" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Quantity" >
-            <!-- <cellValueFactory><PropertyValueFactory property="quantity" />
-            </cellValueFactory> -->
         </TableColumn>
       </columns>
         <items>
@@ -68,6 +65,7 @@
         </items>
     </TableView>
   </center>
+
   <top>
     <VBox minHeight="23.0" prefHeight="23.0" prefWidth="600.0">
       <children>
@@ -77,7 +75,6 @@
               <items>
                 <MenuItem fx:id="newList" mnemonicParsing="false" text="New List" />
                 <MenuItem fx:id="saveList" mnemonicParsing="false" text="Save List" />
-                <MenuItem fx:id="loadList" mnemonicParsing="false" text="Load List" />
                 <MenuItem fx:id="closeWindow" mnemonicParsing="false" text="Close" />
               </items>
             </Menu>
@@ -91,4 +88,5 @@
       </children>
     </VBox>
   </top>
+
 </BorderPane>

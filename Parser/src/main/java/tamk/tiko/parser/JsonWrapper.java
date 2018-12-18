@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * JsonWrapper is used to add Json object essential signs e.g curly signs.
  * 
  * @author      Saku Tynjala saku.tynjala@cs.tamk.fi
- * @version     0.2
+ * @version     0.3
  * @since       0.2
  */
 
@@ -28,7 +28,7 @@ public class JsonWrapper{
     public JsonWrapper(){}
 
     /**
-     * wrapAll method formats all given arguments to json.
+     * wrapAll method formats all given list param to json.
      * 
      * @param itemsData List of JsonObjects
      * @return String as json pattern

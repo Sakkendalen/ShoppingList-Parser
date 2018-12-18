@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * JsonWriter is used to write JsonObject to .json file.
  * 
  * @author      Saku Tynjala saku.tynjala@cs.tamk.fi
- * @version     0.1
+ * @version     0.3
  * @since       0.1
  */
 

@@ -8,14 +8,14 @@ import java.io.File;
  * Main.java purpose is to launch javafx window and connect it with parser.
  * 
  * @author      Saku Tynjala saku.tynjala@cs.tamk.fi
- * @version     0.1
+ * @version     0.3
  * @since       0.1
  */
 
  public class Main {
 
     /**
-     * main method to start the application and in future connect parser and javafx-GUI
+     * main method to start to use parser from command prompt.
      * 
      * @param args command line arguments
      */
@@ -40,7 +40,7 @@ import java.io.File;
 
             items.add(new JsonObject(item, quantity));
 
-            System.out.println("continue?");
+            System.out.println("continue?(type 'no' to stop)");
             q = input.nextLine();
             if(q.equals("no")){
                 loop = false;

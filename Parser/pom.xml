@@ -4,7 +4,7 @@
   <groupId>tamk.tiko</groupId>
   <artifactId>Parser</artifactId>
   <packaging>jar</packaging>
-  <version>0.2</version>
+  <version>0.3</version>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -13,6 +13,7 @@
 
     <build>
     <plugins>
+        
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
@@ -22,6 +23,7 @@
                 <cleanupDaemonThreads>false</cleanupDaemonThreads>
             </configuration>
         </plugin>
+
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
@@ -36,5 +38,6 @@
             </configuration>
         </plugin>
     </plugins>
+
   </build>
 </project>

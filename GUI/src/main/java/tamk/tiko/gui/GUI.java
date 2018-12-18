@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
  * GUI.java launches javafx window.
  * 
  * @author      Saku Tynjala saku.tynjala@cs.tamk.fi
- * @version     0.2
+ * @version     0.3
  * @since       0.2
  */
 
@@ -31,7 +31,7 @@ public class GUI extends Application {
         pStage = primaryStage;
 
          try {
-            // Pane root = (Pane)FXMLLoader.load(getClass().getResource("/GUI.fxml"));
+
 
             Parent root = FXMLLoader.load(getClass().getResource("/GUI.fxml"));
 
@@ -48,13 +48,23 @@ public class GUI extends Application {
         }
     }
 
-        public static Stage getPrimaryStage() {
-            return pStage;
-        }
+    /**
+     * getPrimaryStage method for returning Primary Stage
+     * 
+     * @return Primary Stage
+     */
+    public static Stage getPrimaryStage() {
+        return pStage;
+    }
 
-        private void setPrimaryStage(Stage pStage) {
-            GUI.pStage = pStage;
-        }
+    /**
+     * setPrimaryStage method for defining pStage
+     * 
+     * @param Stage Primary Stage
+     */
+    private void setPrimaryStage(Stage pStage) {
+        GUI.pStage = pStage;
+    }
 
     /**
      * main method to launch javaFX window
@@ -62,9 +72,8 @@ public class GUI extends Application {
      * @param args 
      */
     public static void main(String args[]){
+        System.out.println("Author: Saku Tynjala");
         launch(args);
     }
-    public void closeApplication(Stage primaryStage){
-        primaryStage.close();
-    }
+
 }
