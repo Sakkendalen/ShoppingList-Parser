@@ -20,7 +20,7 @@ mvn exec:java
 
 ## images
 
-without UI
+without UI (Only Parser running)
 ![alt text](https://github.com/Sakkendalen/ShoppingList-Parser/blob/master/img/58e9346d893ddf90c0ae9db50a48ec04.png)
 When program is closed it saves an "ShopList.json" in project directory
 
