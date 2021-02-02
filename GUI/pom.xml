@@ -17,6 +17,17 @@
                 <artifactId>Parser</artifactId>
                 <version>0.3</version>
         </dependency>
+        <dependency>
+             <groupId>org.openjfx</groupId>
+             <artifactId>javafx-controls</artifactId>
+             <version>13</version>
+         </dependency>
+         <dependency>
+             <groupId>org.openjfx</groupId>
+             <artifactId>javafx-fxml</artifactId>
+             <version>13</version>
+         </dependency>
+
     </dependencies>
 
     <build>
@@ -48,6 +59,14 @@
                 <cleanupDaemonThreads>false</cleanupDaemonThreads>
             </configuration>
         </plugin>
+        <plugin>
+                 <groupId>org.openjfx</groupId>
+                 <artifactId>javafx-maven-plugin</artifactId>
+                 <version>0.0.3</version>
+                 <configuration>
+                     <mainClass>com.manhpd.App</mainClass>
+                 </configuration>
+             </plugin>
       </plugins>
       
   </build>
