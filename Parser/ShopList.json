@@ -1,16 +1,12 @@
 {
   "Items": [
 	  {
-      "Item": "m",
-      "Quantity": "5"
+      "Item": "test",
+      "Quantity": "12"
     },
     {
-      "Item": "a",
-      "Quantity": "4"
-    },
-    {
-      "Item": "h",
-      "Quantity": "1"
+      "Item": "testitem",
+      "Quantity": "15"
     }
   ]
 }
