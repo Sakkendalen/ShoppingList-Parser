@@ -7,11 +7,15 @@ apache maven, java and javafx should be installed.
 In maven projects (GUI/Parser):
 
 GUI:
+
 mvn compile
+
 mvn exec:java
 
 Parser:
+
 mvn compile
+
 mvn exec:java
 
 ## images
